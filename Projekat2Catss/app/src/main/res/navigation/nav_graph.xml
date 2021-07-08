@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright 2019, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pocetniFragment">
+    <fragment
+        android:id="@+id/pocetniFragment"
+        android:name="com.example.android.marsrealestate.PocetniFragment"
+        android:label="PocetniFragment" >
+        <action
+            android:id="@+id/action_pocetniFragment_to_informacijeFragment"
+            app:destination="@id/informacijeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacijeFragment"
+        android:name="com.example.android.marsrealestate.InformacijeFragment"
+        android:label="InformacijeFragment" >
+        <action
+            android:id="@+id/action_informacijeFragment_to_overviewFragment2"
+            app:destination="@id/overviewFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/overviewFragment2"
+        android:name="com.example.android.marsrealestate.overview.OverviewFragment"
+        android:label="OverviewFragment" >
+        <action
+            android:id="@+id/action_overviewFragment2_to_podaciFragment"
+            app:destination="@id/podaciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/podaciFragment"
+        android:name="com.example.android.marsrealestate.PodaciFragment"
+        android:label="PodaciFragment" >
+        <action
+            android:id="@+id/action_podaciFragment_to_krajFragment"
+            app:destination="@id/krajFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/krajFragment"
+        android:name="com.example.android.marsrealestate.KrajFragment"
+        android:label="KrajFragment" >
+        <argument
+            android:name="ime"
+            app:argType="string" />
+        <argument
+            android:name="prezime"
+            app:argType="string" />
+        <argument
+            android:name="broj"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/OProjektuFragment2"
+        android:name="com.example.android.marsrealestate.OProjektuFragment"
+        android:label="OProjektuFragment" />
+</navigation>
